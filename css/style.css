@@ -196,14 +196,6 @@ h1,h2,h3,p{margin:0;}
   justify-content:center;
 }
 
-.btn-kakao{
-  background:#FEE500;
-  color:#391B1B;
-  gap:8px;
-}
-.btn-kakao:hover{ background:#f7d900; transform:translateY(-2px); }
-.btn-kakao svg{ flex-shrink:0; }
-
 .mid-cta{ padding:48px 0; background:var(--navy-900); }
 .mid-cta-inner{
   display:flex;
