@@ -1,0 +1,14 @@
+{
+  "name": "pptbranding-static-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "check": "node scripts/check.mjs",
+    "new-case": "node scripts/new-case.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

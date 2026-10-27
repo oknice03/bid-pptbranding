@@ -3,3 +3,12 @@
 *.Zip
 지명원 포트폴리오 이미지/
 .claude/
+dist/
+.netlify/
+node_modules/
+
+# Only reviewed public case images may be uploaded to this public repository.
+/assets/img/cases/*
+!/assets/img/cases/cleanroom-04.png
+!/assets/img/cases/cleanroom-01.png
+!/assets/img/cases/cleanroom-02-public.png

@@ -1,2 +1,12 @@
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[context.deploy-preview.environment]
+  SITE_NOINDEX = "1"
+
+[context.branch-deploy.environment]
+  SITE_NOINDEX = "1"
