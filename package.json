@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
+    "postbuild": "node scripts/package-pages.mjs",
     "preview": "node scripts/preview.mjs",
     "check": "node scripts/check.mjs",
     "new-case": "node scripts/new-case.mjs"

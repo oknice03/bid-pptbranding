@@ -1,6 +1,7 @@
 PPT BRANDING 홈페이지 운영 안내
 검수 버전: 2026-10-27-portfolio-v5-search-ready
 검수 상태: 로컬 검수 완료. 실제 공개 여부는 GitHub 커밋·Netlify 배포 결과와 공개 URL로 확인합니다.
+호스팅 확인 정정 (2026-10-27): 이 공사지명원 사이트의 실제 호스팅은 GitHub Pages입니다. 회사소개서 사이트는 Netlify입니다. 이 저장소는 main 브랜치의 /docs 생성 폴더를 공개하며 도메인은 bid.pptbranding.com 그대로 유지합니다.
 
 1. 대표님이 새 포트폴리오를 추가할 때
 사진과 아래 내용을 이 대화에 보내주시면 새 상세 페이지로 정리할 수 있습니다.
@@ -44,6 +45,7 @@ npm run new-case -- 영문-사례주소
 
 npm run build
 → dist/에 공개용 정적 HTML을 만듭니다. 목록, 관련 사례, 검색용 구조화 데이터, 사이트맵과 llms.txt도 갱신합니다.
+→ 공사지명원은 npm run build 후 postbuild가 검사를 통과한 dist를 docs/에 복사합니다. docs/까지 함께 커밋·푸시해야 GitHub Pages에 반영됩니다. docs를 직접 편집하지 않습니다. 검수 전용 noindex 빌드는 공개 docs를 갱신하지 않습니다.
 → index.html은 메인 문구·서비스·검색 제목·소개글의 편집 원본입니다. FAQ는 content/faq.json이 화면과 구조화 데이터의 단일 원본입니다.
 → 메인 메뉴, 포트폴리오 섹션, 하단 메뉴는 빌드 시 생성기로 치환됩니다.
 → 새 포트폴리오는 원본 index.html의 옛 이미지 목록에 넣지 말고 JSON에 추가합니다.
@@ -71,6 +73,7 @@ npm run preview
 - 두 사이트의 관련 페이지가 동시에 연결되도록 함께 배포를 준비합니다.
 - 이번 수정 파일만 해당 Git 저장소에 커밋·푸시합니다. 회사소개서 폴더의 기존 시장조사 자료는 포함하지 않습니다.
 - Netlify의 빌드 명령은 npm run build, 배포 폴더는 dist 입니다.
+- 위 Netlify 설정은 회사소개서 사이트에 적용됩니다. 공사지명원은 GitHub Pages의 기존 branch 배포를 유지하되 Source를 main /docs로 설정합니다. npm run build → npm run check → 소스와 docs 함께 커밋·푸시 순서로 갱신합니다.
 - 서버 루트나 소스 폴더 전체를 드래그해서 배포하지 않습니다.
 - 제작 원본/PDF/ZIP/이력서/내부 자료는 배포 대상에서 제외됩니다. 빌드 출력은 허용된 정적 파일만 담습니다.
 - 대표 승인 전에는 GitHub push, Netlify deploy, DNS 변경을 하지 않습니다.
