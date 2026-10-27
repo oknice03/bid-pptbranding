@@ -1,0 +1,99 @@
+{
+  "slug": "yebo-construction-profile",
+  "status": "ready",
+  "order": -19,
+  "title": "예보이엔씨 도로포장 공사지명원",
+  "category": "도로포장·철근콘크리트",
+  "summary": "도로포장 이미지를 중심으로 전문 분야를 보여줍니다. 사업 소개와 시공 역량을 서로 다른 내지 구성으로 정리했습니다.",
+  "updated": "2026-10-27",
+  "source": "2026년 완성 폴더의 PowerPoint 원본을 읽기 전용으로 PNG 직접 내보내기. 표지와 선별 내지의 출처·원본 해시는 홈페이지 팀 비공개 작업기록에 보관. 설명은 완성본에서 확인한 구성과 디자인만 기술하며 인터뷰·원고 작성 범위는 미확인.",
+  "storyKind": "design",
+  "layout": "curated-gallery",
+  "cardImage": {
+    "src": "/assets/img/mockups/yebo-construction-profile-cover-v1.png",
+    "alt": "예보이엔씨 실제 완성 표지를 포함한 책자 AI 목업",
+    "caption": "실제 완성본 표지를 배치한 AI 목업이며 인쇄물 촬영 사진이 아닙니다.",
+    "kind": "mockup",
+    "includesCover": true,
+    "generated": true
+  },
+  "cardSummary": "도로포장 이미지를 중심으로 전문 분야를 보여줍니다.",
+  "images": [
+    {
+      "src": "/assets/img/mockups/yebo-construction-profile-cover-v1.png",
+      "alt": "예보이엔씨 실제 완성 표지를 포함한 책자 AI 목업",
+      "caption": "실제 완성본 표지를 배치한 AI 목업이며 인쇄물 촬영 사진이 아닙니다.",
+      "kind": "mockup",
+      "includesCover": true,
+      "generated": true
+    },
+    {
+      "src": "/assets/img/final/yebo-construction-profile/page-10.png",
+      "alt": "예보이엔씨 도로포장 사업 소개 실제 완성 페이지",
+      "caption": "완성본에서 선별한 도로포장 사업 소개 페이지입니다. 페이지 속 이미지는 문서의 디자인 표현으로, 실제 현장 촬영 여부를 별도로 확인한 사진은 아닙니다.",
+      "width": 1100,
+      "height": 1543,
+      "kind": "final"
+    },
+    {
+      "src": "/assets/img/final/yebo-construction-profile/page-07.png",
+      "alt": "예보이엔씨 비전과 경영방침 실제 완성 페이지",
+      "caption": "완성본에서 선별한 비전과 경영방침 페이지입니다. 페이지 속 이미지는 문서의 디자인 표현으로, 실제 현장 촬영 여부를 별도로 확인한 사진은 아닙니다.",
+      "width": 1100,
+      "height": 1543,
+      "kind": "final"
+    },
+    {
+      "src": "/assets/img/final/yebo-construction-profile/page-13.png",
+      "alt": "예보이엔씨 직영 시공 경쟁력 실제 완성 페이지",
+      "caption": "완성본에서 선별한 직영 시공 경쟁력 페이지입니다. 페이지 속 이미지는 문서의 디자인 표현으로, 실제 현장 촬영 여부를 별도로 확인한 사진은 아닙니다.",
+      "width": 1100,
+      "height": 1543,
+      "kind": "final"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "디자인 구성",
+      "text": "표지에는 도로포장 장비와 파란색 사선 구도를 사용했습니다. 내지는 공사 분야와 경쟁력이 구분되도록 구성했습니다."
+    },
+    {
+      "heading": "도로포장 사업 소개",
+      "text": "아스팔트 포장과 도로 유지보수를 나누어 보여줍니다. 이미지 옆에 주요 업무와 핵심 경쟁력을 배치했습니다.",
+      "image": 1
+    },
+    {
+      "heading": "비전과 경영방침",
+      "text": "비전 문장을 넓은 색상 영역에 강조했습니다. 안전과 품질, 책임시공을 각 항목으로 정리했습니다.",
+      "image": 2
+    },
+    {
+      "heading": "직영 시공 경쟁력",
+      "text": "자체 장비와 현장 대응 역량을 번호별로 구분했습니다. 핵심 문장은 굵게 처리해 먼저 읽히도록 했습니다.",
+      "image": 3
+    }
+  ],
+  "highlights": [
+    "도로포장 장비가 중심이 되는 표지 구성",
+    "사업별 이미지와 업무 설명을 나란히 배치",
+    "번호와 굵은 글씨로 경쟁력의 읽는 순서 정리"
+  ],
+  "facts": [
+    {
+      "label": "고객사",
+      "value": "예보이엔씨"
+    },
+    {
+      "label": "제작물",
+      "value": "공사지명원"
+    },
+    {
+      "label": "선별 샘플",
+      "value": "최종 내지 3장"
+    }
+  ],
+  "selection": {
+    "mode": "curated",
+    "note": "연속 페이지 대신 구도와 정보 표현 방식이 다른 내지 3장 선별"
+  }
+}

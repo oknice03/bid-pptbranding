@@ -2,6 +2,7 @@ import { readFile, writeFile, readdir, mkdir, copyFile, access, rm, lstat } from
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {validateStory,renderCase} from './case-page.mjs';
+import {renderCuratedArticle} from './curated-case.mjs';
 import {validateFaq,faqSchema,renderFaq} from './faq.mjs';
 import {buildLlmsText} from './search-assets.mjs';
 
@@ -28,7 +29,8 @@ for(const c of cases) {
   assert(c.images?.length&&c.sections?.length>=2&&c.highlights?.length,c.slug+': 이미지·본문·특징 필요');
   for(const s of c.sections) assert(s.heading?.trim()&&s.text?.trim(),c.slug+': 빈 본문');
   validateStory(c);
-  for(const img of c.images) {
+  assert(c.cardImage?.kind==='mockup'&&c.cardImage.includesCover===true,c.slug+': 카드에는 표지를 포함한 목업을 지정하세요.');
+  for(const img of [...c.images,...(c.cardImage?[c.cardImage]:[])]) {
     assert(/^\/assets\/img\/[^?#]+$/u.test(img.src)&&!img.src.includes('..')&&!img.src.includes('\\'),c.slug+': 이미지 경로 확인');
     assert(/\.(jpg|jpeg|png|webp)$/i.test(img.src)&&img.alt?.trim()&&img.caption?.trim(),c.slug+': 이미지 설명 필요');
     images.add(img.src);
@@ -67,15 +69,16 @@ const header=()=>'<a class="skip-link" href="#main">본문 바로가기</a><head
 const footer=()=>'<footer class="site-footer"><div class="wrap"><img src="/assets/img/logo.png" alt="피피티브랜딩 PPT BRANDING" class="footer-logo"><nav class="mp-footer-nav" aria-label="하단 메뉴"><a href="https://pptbranding.com/services/">전체 서비스</a><a href="https://pptbranding.com/about/">브랜드 소개</a><a href="/portfolio/">'+site.service+' 사례</a><a href="/guides/">제작 가이드</a><a href="/#faq">'+site.service+' 자주 묻는 질문</a><a href="'+site.otherDomain+'/">'+site.otherService+' 보러가기</a><a href="https://blog.naver.com/powerpointhelper">네이버 블로그</a></nav><div class="mp-footer-contact"><a href="tel:01075100215">010-7510-0215</a><a href="mailto:oknice03@gmail.com">oknice03@gmail.com</a></div><p>© PPT BRANDING. All Rights Reserved.</p></div></footer>';
 const crumbs=items=>'<nav class="mp-breadcrumb" aria-label="현재 위치"><a href="/">홈</a>'+items.map(([name,url])=>'<span aria-hidden="true">/</span>'+(url?'<a href="'+esc(url)+'">'+esc(name)+'</a>':'<span aria-current="page">'+esc(name)+'</span>')).join('')+'</nav>';
 const intro=(title,desc,kicker='PPT BRANDING',meta='')=>'<div class="mp-intro"><div class="wrap"><p class="mp-kicker">'+esc(kicker)+'</p><h1>'+esc(title)+'</h1><p class="mp-lead">'+esc(desc)+'</p>'+meta+'</div></div>';
-const card=c=>'<article class="mp-card" data-case data-category="'+esc(c.category)+'"><a href="'+canonicalCase(c)+'"><div class="mp-card-visual"><img src="'+esc(c.images[0].src)+'" alt="'+esc(c.images[0].alt)+'" loading="lazy" decoding="async"></div><div class="mp-card-body"><span class="mp-category">'+esc(c.category)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(c.summary)+'</p><span class="mp-card-more">'+(c.storyKind==='production'?'선별 실제 페이지 '+c.images.filter(img=>img.kind!=='mockup').length+'장 · 제작 과정 보기':'사례 자세히 보기')+' <span aria-hidden="true">↗</span></span></div></a></article>';
+const cardImage=c=>c.cardImage??c.images[0];
+const card=c=>'<article class="mp-card" data-case data-category="'+esc(c.category)+'"><a href="'+canonicalCase(c)+'"><div class="mp-card-visual"><img src="'+esc(cardImage(c).src)+'" alt="'+esc(cardImage(c).alt)+'" loading="lazy" decoding="async"></div><div class="mp-card-body"><span class="mp-category">'+esc(c.category)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(c.cardSummary??c.summary)+'</p><span class="mp-card-more">'+(c.images.length>1?'선별 실제 페이지 '+c.images.filter(img=>img.kind!=='mockup').length+'장 · 사례 보기':'사례 자세히 보기')+' <span aria-hidden="true">↗</span></span></div></a></article>';
 const guideCards=()=>'<div class="mp-guide-grid">'+guides.map((g,i)=>'<article class="mp-guide"><a href="/guides/'+g.slug+'/"><span class="mp-category">GUIDE '+String(i+1).padStart(2,'0')+'</span><h3>'+esc(g.title)+'</h3><p>'+esc(g.summary)+'</p><span class="mp-card-more">가이드 읽기 →</span></a></article>').join('')+'</div>';
 const seoHeading=text=>text.includes(site.service)?text:site.service+' '+text;
 const cta=()=>'<aside class="mp-cta"><h2>'+site.service+', 구성부터 상담하세요.</h2><p>사용 목적과 현재 갖고 계신 자료를 알려주시면 필요한 기획과 디자인 범위를 함께 정리합니다.</p><a class="btn btn-accent" href="tel:01075100215">전화로 제작 상담</a> <a class="btn btn-outline-light" href="mailto:oknice03@gmail.com">이메일 문의</a></aside>';
-function page({url,title,description,body,graph=[],image=cases[0].images[0].src,date=updated,trail=[],exclude=false}){
+function page({url,title,description,body,graph=[],image=cardImage(cases[0]).src,date=updated,trail=[],exclude=false,customAssets=false}){
  const breadcrumb={'@type':'BreadcrumbList',itemListElement:[{name:'홈',url:'/'},...trail].map((p,i)=>({'@type':'ListItem',position:i+1,name:p.name,item:absolute(p.url)}))};
  const webpage={'@type':'WebPage','@id':absolute(url)+'#webpage',url:absolute(url),name:title,description,inLanguage:'ko-KR',isPartOf:{'@id':website['@id']},about:{'@id':service['@id']},publisher:{'@id':orgId},dateModified:date};
  const data=[...base,webpage,...(trail.length?[breadcrumb]:[]),...graph];
- const html='<!doctype html>\n<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'+esc(title)+' | 피피티브랜딩</title><meta name="description" content="'+esc(description)+'"><link rel="canonical" href="'+absolute(url)+'"><meta name="robots" content="'+(noindex||exclude?'noindex,follow':'index,follow,max-image-preview:large')+'"><meta property="og:type" content="website"><meta property="og:site_name" content="피피티브랜딩"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="'+esc(title)+'"><meta property="og:description" content="'+esc(description)+'"><meta property="og:url" content="'+absolute(url)+'"><meta property="og:image" content="'+absolute(image)+'"><meta property="og:image:alt" content="'+esc(title)+'"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="'+esc(title)+'"><meta name="twitter:description" content="'+esc(description)+'"><meta name="twitter:image" content="'+absolute(image)+'"><link rel="icon" href="/assets/img/logo.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/pages.css">'+schema(data)+'</head><body>'+header()+'<main id="main">'+body+'</main>'+footer()+'<script src="/js/pages.js" defer></script></body></html>';
+ const html='<!doctype html>\n<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'+esc(title)+' | 피피티브랜딩</title><meta name="description" content="'+esc(description)+'"><link rel="canonical" href="'+absolute(url)+'"><meta name="robots" content="'+(noindex||exclude?'noindex,follow':'index,follow,max-image-preview:large')+'"><meta property="og:type" content="website"><meta property="og:site_name" content="피피티브랜딩"><meta property="og:locale" content="ko_KR"><meta property="og:title" content="'+esc(title)+'"><meta property="og:description" content="'+esc(description)+'"><meta property="og:url" content="'+absolute(url)+'"><meta property="og:image" content="'+absolute(image)+'"><meta property="og:image:alt" content="'+esc(title)+'"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="'+esc(title)+'"><meta name="twitter:description" content="'+esc(description)+'"><meta name="twitter:image" content="'+absolute(image)+'"><link rel="icon" href="/assets/img/logo.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/pages.css">'+schema(data)+(customAssets?'<link rel="stylesheet" href="/css/pilot.css">':'')+'</head><body>'+header()+'<main id="main">'+body+'</main>'+footer()+'<script src="/js/pages.js" defer></script>'+(customAssets?'<script src="/js/pilot.js" defer></script>':'')+'</body></html>';
  pages.push({url,html:html.replace('</head>',noScript+'</head>'),date,image,exclude});
 }
 
@@ -86,8 +89,20 @@ graph:[{'@type':'ItemList',name:site.service+' 포트폴리오',itemListElement:
 for(const c of cases) {
  const url=canonicalCase(c);
  const relatedCases=[...cases.filter(x=>x.slug!==c.slug&&x.category===c.category),...cases.filter(x=>x.slug!==c.slug&&x.category!==c.category)].slice(0,3);
- page({url,title:c.title+' 제작 사례',description:c.summary,image:c.images[0].src,date:c.updated,trail:[{name:'포트폴리오',url:'/portfolio/'},{name:c.title,url}],
- body:renderCase(c,{site,esc,crumbs,intro,card,relatedCases}),
+ let caseBody=renderCase(c,{site,esc,crumbs,intro,card,relatedCases});
+ if(c.layout==='curated-gallery') {
+  caseBody=caseBody.replace(/<article>[\s\S]*?<\/article>(?=<aside class="mp-sidebar">)/,renderCuratedArticle(c,{site,esc}));
+  caseBody=caseBody.replace('자료 정리와 목차 구성부터 함께 진행합니다. 현재 자료와 필요한 결과물의 형태를 알려주세요.','사업 내용부터 함께 정리합니다.');
+  caseBody=caseBody.replace(esc(c.summary)+'</p>',c.summary.split(/(?<=\.)\s+/).map(s=>'<span class="pilot-sentence">'+esc(s)+'</span>').join('')+'</p>');
+ }
+ if(c.layout==='curated-final') {
+  const article=await readFile(path.join(root,'content/layouts/plant-facilities-profile.html'),'utf8');
+  caseBody=caseBody.replace(/<article>[\s\S]*?<\/article>(?=<aside class="mp-sidebar">)/,article);
+  caseBody=caseBody.replace(esc(c.summary)+'</p>',c.summary.split(/(?<=\.)\s+/).map(s=>'<span class="pilot-sentence">'+esc(s)+'</span>').join('')+'</p>');
+  caseBody=caseBody.replace('자료 정리와 목차 구성부터 함께 진행합니다. 현재 자료와 필요한 결과물의 형태를 알려주세요.','사업 내용부터 함께 정리합니다.');
+ }
+ page({url,customAssets:['curated-final','curated-gallery'].includes(c.layout),title:c.title+' 제작 사례',description:c.summary,image:cardImage(c).src,date:c.updated,trail:[{name:'포트폴리오',url:'/portfolio/'},{name:c.title,url}],
+ body:caseBody,
  graph:[{'@type':'CreativeWork','@id':absolute(url)+'#work',name:c.title,description:c.summary,url:absolute(url),image:c.images.map(img=>absolute(img.src)),citation:(c.sources??[]).map(s=>s.url),creator:{'@id':orgId},about:{'@id':service['@id']},inLanguage:'ko-KR',mainEntityOfPage:{'@id':absolute(url)+'#webpage'}}]});
 }
 page({url:'/guides/',title:site.service+' 가이드',description:site.service+'를 준비할 때 확인할 자료, 목차와 견적 상담 기준을 안내합니다.',trail:[{name:'제작 가이드',url:'/guides/'}],body:'<div class="wrap">'+crumbs([['제작 가이드']])+'</div>'+intro('제작 전에,\n먼저 정리하면 좋은 것들.',site.service+'를 처음 의뢰하시는 분을 위한 준비 안내입니다. 자료, 목차, 견적 상담 순서로 살펴보세요.','GUIDE / '+site.service)+'<section class="mp-section"><div class="wrap"><h2 class="mp-title">'+site.service+' 준비 자료·목차·견적 안내</h2>'+guideCards()+cta()+'</div></section>'});
@@ -110,9 +125,9 @@ home=home.replace('<script src="js/main.js"></script>','<script src="/js/pages.j
 home=home.replace('</head>','<meta name="robots" content="'+(noindex?'noindex,follow':'index,follow,max-image-preview:large')+'"><link rel="stylesheet" href="/css/pages.css"></head>');
 home=home.replace('이렇게 해주는 곳은 이곳 뿐입니다','기획부터 디자인까지, 필요한 과정을 함께합니다');
 home=home.replaceAll('http://pptbranding.com','https://pptbranding.com');
-home=home.replace(/(<meta (?:property="og:image"|name="twitter:image") content=")[^"]+"/g,'$1'+absolute(cases[0].images[0].src)+'"');
+home=home.replace(/(<meta (?:property="og:image"|name="twitter:image") content=")[^"]+"/g,'$1'+absolute(cardImage(cases[0]).src)+'"');
 home=home.replace(/(<section class="section contact-section" id="contact">)/,'<section class="section section-alt"><div class="wrap"><div class="mp-heading-row"><h2>'+site.service+' 준비 가이드</h2><a class="mp-link" href="/guides/">가이드 전체 보기 →</a></div>'+guideCards()+'</div></section>$1');
-pages.unshift({url:'/',html:home.replace('</head>',noScript+'</head>'),date:updated,image:cases[0].images[0].src,exclude:false});
+pages.unshift({url:'/',html:home.replace('</head>',noScript+'</head>'),date:updated,image:cardImage(cases[0]).src,exclude:false});
 
 const llmsText=buildLlmsText(site,cases,guides);
 for(const p of pages) if(!p.exclude) p.html=p.html.replace('</head>','<link rel="describedby" href="/llms.txt" type="text/plain"></head>');
@@ -131,7 +146,7 @@ await mkdir(out,{recursive:true});
 await writeFile(path.join(out,'.pptbranding-build'),'Generated static output only.\n');
 const put=async(name,data)=>{const target=path.join(out,name);await mkdir(path.dirname(target),{recursive:true});await writeFile(target,data);};
 for(const p of pages)await put(p.url==='/'?'index.html':p.url.endsWith('/')?p.url.slice(1)+'index.html':p.url.slice(1),p.html);
-for(const file of [...images].map(x=>x.slice(1)).concat(['css/style.css','css/pages.css','js/pages.js'])){
+for(const file of [...images].map(x=>x.slice(1)).concat(['css/style.css','css/pages.css','js/pages.js','css/pilot.css','js/pilot.js'])){
  const target=path.join(out,file);await mkdir(path.dirname(target),{recursive:true});await copyFile(path.join(root,file),target);
 }
 for(const name of await readdir(root))if(/^google[a-f0-9]+\.html$/.test(name)||/^naver[a-f0-9]+\.html$/.test(name))await copyFile(path.join(root,name),path.join(out,name));

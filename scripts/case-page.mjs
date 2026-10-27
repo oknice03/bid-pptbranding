@@ -5,7 +5,7 @@ export function validateStory(c) {
   assert(indexes.every(i=>Number.isInteger(i)&&i>0&&i<c.images.length),c.slug+': 본문 이미지 번호 확인');
   assert.equal(new Set(indexes).size,indexes.length,c.slug+': 본문 이미지 중복');
   if(c.storyKind==='production') {
-    assert(c.sources?.length&&c.facts?.length,c.slug+': 제작기 출처와 요약 정보 필요');
+    assert((c.sources?.length||c.authorConfirmation?.trim())&&c.facts?.length,c.slug+': 제작기 출처 또는 담당자 확인과 요약 정보 필요');
     assert.equal(indexes.length,c.images.length-1,c.slug+': 실제 페이지를 해당 설명과 연결하세요.');
   }
   for(const source of c.sources??[]) {

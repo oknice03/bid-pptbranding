@@ -1,0 +1,99 @@
+{
+  "slug": "bln-construction-profile",
+  "status": "ready",
+  "order": -20,
+  "title": "비엘엔종합건설 종합건설 공사지명원",
+  "category": "종합건설·산업시설",
+  "summary": "건설 현장의 이미지와 남색을 중심으로 구성했습니다. 경영방침과 공사 수행 과정을 선별 내지로 보여드립니다.",
+  "updated": "2026-10-27",
+  "source": "2026년 완성 폴더의 PowerPoint 원본을 읽기 전용으로 PNG 직접 내보내기. 표지와 선별 내지의 출처·원본 해시는 홈페이지 팀 비공개 작업기록에 보관. 설명은 완성본에서 확인한 구성과 디자인만 기술하며 인터뷰·원고 작성 범위는 미확인.",
+  "storyKind": "design",
+  "layout": "curated-gallery",
+  "cardImage": {
+    "src": "/assets/img/mockups/bln-construction-profile-cover-v1.png",
+    "alt": "비엘엔종합건설 실제 완성 표지를 포함한 책자 AI 목업",
+    "caption": "실제 완성본 표지를 배치한 AI 목업이며 인쇄물 촬영 사진이 아닙니다.",
+    "kind": "mockup",
+    "includesCover": true,
+    "generated": true
+  },
+  "cardSummary": "건설 현장의 이미지와 남색을 중심으로 구성했습니다.",
+  "images": [
+    {
+      "src": "/assets/img/mockups/bln-construction-profile-cover-v1.png",
+      "alt": "비엘엔종합건설 실제 완성 표지를 포함한 책자 AI 목업",
+      "caption": "실제 완성본 표지를 배치한 AI 목업이며 인쇄물 촬영 사진이 아닙니다.",
+      "kind": "mockup",
+      "includesCover": true,
+      "generated": true
+    },
+    {
+      "src": "/assets/img/final/bln-construction-profile/page-07.png",
+      "alt": "비엘엔종합건설 비전과 경영방침 실제 완성 페이지",
+      "caption": "완성본에서 선별한 비전과 경영방침 페이지입니다. 페이지 속 이미지는 문서의 디자인 표현으로, 실제 현장 촬영 여부를 별도로 확인한 사진은 아닙니다.",
+      "width": 1100,
+      "height": 1543,
+      "kind": "final"
+    },
+    {
+      "src": "/assets/img/final/bln-construction-profile/page-13.png",
+      "alt": "비엘엔종합건설 시공 경쟁력 실제 완성 페이지",
+      "caption": "완성본에서 선별한 시공 경쟁력 페이지입니다. 페이지 속 이미지는 문서의 디자인 표현으로, 실제 현장 촬영 여부를 별도로 확인한 사진은 아닙니다.",
+      "width": 1100,
+      "height": 1543,
+      "kind": "final"
+    },
+    {
+      "src": "/assets/img/final/bln-construction-profile/page-12.png",
+      "alt": "비엘엔종합건설 공사 수행 프로세스 실제 완성 페이지",
+      "caption": "완성본에서 선별한 공사 수행 프로세스 페이지입니다. 페이지 속 이미지는 문서의 디자인 표현으로, 실제 현장 촬영 여부를 별도로 확인한 사진은 아닙니다.",
+      "width": 1100,
+      "height": 1543,
+      "kind": "final"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "디자인 구성",
+      "text": "표지는 철골 구조와 건축 이미지를 세로로 배치했습니다. 내지는 남색 제목과 도식으로 시공 역량을 구분했습니다."
+    },
+    {
+      "heading": "비전과 경영방침",
+      "text": "현장 이미지를 넓게 배치해 건설업의 성격을 드러냈습니다. 비전 문장 아래에 경영방침을 나누어 정리했습니다.",
+      "image": 1
+    },
+    {
+      "heading": "시공 경쟁력",
+      "text": "기술인력과 현장관리 역량을 번호별로 구분했습니다. 긴 설명도 항목을 따라 읽을 수 있도록 구성했습니다.",
+      "image": 2
+    },
+    {
+      "heading": "공사 수행 프로세스",
+      "text": "사업 검토부터 준공 후 관리까지 흐름을 정리했습니다. 단계마다 같은 폭과 색상을 적용했습니다.",
+      "image": 3
+    }
+  ],
+  "highlights": [
+    "철골 구조와 건축 이미지로 업종을 표현한 표지",
+    "비전과 경영방침을 구분한 정보 배치",
+    "수행 단계와 경쟁력을 읽기 쉽게 정리한 내지"
+  ],
+  "facts": [
+    {
+      "label": "고객사",
+      "value": "비엘엔종합건설"
+    },
+    {
+      "label": "제작물",
+      "value": "공사지명원"
+    },
+    {
+      "label": "선별 샘플",
+      "value": "최종 내지 3장"
+    }
+  ],
+  "selection": {
+    "mode": "curated",
+    "note": "연속 페이지 대신 구도와 정보 표현 방식이 다른 내지 3장 선별"
+  }
+}
