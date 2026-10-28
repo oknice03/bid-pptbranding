@@ -1,11 +1,13 @@
 import {readFile,readdir,stat,access} from 'node:fs/promises';
+import {sortPortfolio} from './portfolio-display.mjs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {buildLlmsText} from './search-assets.mjs';
 export async function checkSearchAssets(site,root){
  const catalog=JSON.parse(await readFile('content/cases.json','utf8'));
  for(const name of await readdir('content/cases').catch(()=>[]))if(name.endsWith('.json'))catalog.push(JSON.parse(await readFile(path.join('content/cases',name),'utf8')));
- const ready=catalog.filter(c=>c.status==='ready').sort((a,b)=>(a.order??999)-(b.order??999)||a.slug.localeCompare(b.slug));
+ const display=JSON.parse(await readFile('content/portfolio-display.json','utf8'));
+ const ready=sortPortfolio(catalog.filter(c=>c.status==='ready'),display.entries);
  const guides=JSON.parse(await readFile('content/guides.json','utf8'));
  const llms=await readFile(path.join(root,'llms.txt'),'utf8');
  assert.equal(llms,buildLlmsText(site,ready,guides),'AI 안내 파일이 공개 데이터와 일치해야 합니다.');

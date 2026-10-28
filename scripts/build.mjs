@@ -5,6 +5,7 @@ import {validateStory,renderCase} from './case-page.mjs';
 import {renderCuratedArticle} from './curated-case.mjs';
 import {validateFaq,faqSchema,renderFaq} from './faq.mjs';
 import {buildLlmsText} from './search-assets.mjs';
+import {sortPortfolio,portfolioVisual} from './portfolio-display.mjs';
 
 const root=process.cwd(), out=path.resolve(root,'dist');
 const readJSON=async name=>JSON.parse(await readFile(path.join(root,name),'utf8'));
@@ -19,7 +20,9 @@ for(const c of all) {
   assert(!seen.has(c.slug),'중복 사례 주소: '+c.slug);seen.add(c.slug);
   assert(['draft','ready'].includes(c.status),'상태는 draft 또는 ready: '+c.slug);
 }
-const cases=all.filter(c=>c.status==='ready').sort((a,b)=>(a.order??999)-(b.order??999)||a.slug.localeCompare(b.slug));
+const display=await readJSON('content/portfolio-display.json');
+const relatedDisplays=await readJSON('content/related-displays.json');
+const cases=sortPortfolio(all.filter(c=>c.status==='ready'),display.entries);
 assert(cases.length>0,'공개 후보 사례가 없습니다.');
 const images=new Set(['/assets/img/logo.png','/assets/img/profile.png']);
 const validDate=value=>/^\d{4}-\d{2}-\d{2}$/.test(value)&&new Date(value).toISOString().slice(0,10)===value;
@@ -70,7 +73,7 @@ const footer=()=>'<footer class="site-footer"><div class="wrap"><img src="/asset
 const crumbs=items=>'<nav class="mp-breadcrumb" aria-label="현재 위치"><a href="/">홈</a>'+items.map(([name,url])=>'<span aria-hidden="true">/</span>'+(url?'<a href="'+esc(url)+'">'+esc(name)+'</a>':'<span aria-current="page">'+esc(name)+'</span>')).join('')+'</nav>';
 const intro=(title,desc,kicker='PPT BRANDING',meta='')=>'<div class="mp-intro"><div class="wrap"><p class="mp-kicker">'+esc(kicker)+'</p><h1>'+esc(title)+'</h1><p class="mp-lead">'+esc(desc)+'</p>'+meta+'</div></div>';
 const cardImage=c=>c.cardImage??c.images[0];
-const card=c=>'<article class="mp-card" data-case data-category="'+esc(c.category)+'"><a href="'+canonicalCase(c)+'"><div class="mp-card-visual"><img src="'+esc(cardImage(c).src)+'" alt="'+esc(cardImage(c).alt)+'" loading="lazy" decoding="async"></div><div class="mp-card-body"><span class="mp-category">'+esc(c.category)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(c.cardSummary??c.summary)+'</p><span class="mp-card-more">'+(c.images.length>1?'선별 실제 페이지 '+c.images.filter(img=>img.kind!=='mockup').length+'장 · 사례 보기':'사례 자세히 보기')+' <span aria-hidden="true">↗</span></span></div></a></article>';
+const card=c=>'<article class="mp-card" data-case data-category="'+esc(c.category)+'" data-search="'+esc(c.category+' '+c.title+' '+(c.cardSummary??c.summary))+'"><a href="'+canonicalCase(c)+'">'+portfolioVisual(c,display.entries[c.slug],esc)+'<div class="mp-card-body"><span class="mp-category">'+esc(c.category)+'</span><h3>'+esc(c.title)+'</h3></div></a></article>';
 const guideCards=()=>'<div class="mp-guide-grid">'+guides.map((g,i)=>'<article class="mp-guide"><a href="/guides/'+g.slug+'/"><span class="mp-category">GUIDE '+String(i+1).padStart(2,'0')+'</span><h3>'+esc(g.title)+'</h3><p>'+esc(g.summary)+'</p><span class="mp-card-more">가이드 읽기 →</span></a></article>').join('')+'</div>';
 const seoHeading=text=>text.includes(site.service)?text:site.service+' '+text;
 const cta=()=>'<aside class="mp-cta"><h2>'+site.service+', 구성부터 상담하세요.</h2><p>사용 목적과 현재 갖고 계신 자료를 알려주시면 필요한 기획과 디자인 범위를 함께 정리합니다.</p><a class="btn btn-accent" href="tel:01075100215">전화로 제작 상담</a> <a class="btn btn-outline-light" href="mailto:oknice03@gmail.com">이메일 문의</a></aside>';
@@ -83,7 +86,7 @@ function page({url,title,description,body,graph=[],image=cardImage(cases[0]).src
 }
 
 page({url:'/portfolio/',title:site.service+' 포트폴리오',description:'업종별 '+site.service+' 사례를 확인하세요. 각 사례의 표지와 내부 페이지, 정보 구성과 디자인 특징을 개별 페이지에서 살펴볼 수 있습니다.',trail:[{name:'포트폴리오',url:'/portfolio/'}],
-body:'<div class="wrap">'+crumbs([['포트폴리오']])+'</div>'+intro('한 장의 인상부터,\n회사를 설명하는 흐름까지.',site.service+' 사례의 표지와 내부 페이지를 함께 보세요. 이미지뿐 아니라 정보의 구성과 디자인 특징도 정리했습니다.','PORTFOLIO / '+site.service)+'<section class="mp-section"><div class="wrap"><h2 class="mp-title">'+site.service+' 사례</h2><div class="mp-filters"><label>사례 검색<input id="caseSearch" type="search" placeholder="업종 또는 구성 특징 검색"></label><label>업종별 보기<select id="caseCategory"><option value="">전체 업종</option>'+[...new Set(cases.map(c=>c.category))].map(c=>'<option>'+esc(c)+'</option>').join('')+'</select></label><output id="caseCount" aria-live="polite">'+cases.length+'개 사례</output></div><div class="mp-grid">'+cases.map(card).join('')+'</div><p class="mp-empty" id="caseEmpty" hidden>검색 결과가 없습니다. 다른 단어를 입력하거나 전체 업종을 선택해 주세요.</p></div></section><section class="mp-section"><div class="wrap"><div class="mp-heading-row"><h2>함께 살펴볼 '+site.otherService+' 사례</h2><a class="mp-link" href="'+site.otherDomain+'/portfolio/">전체 보기 →</a></div><div class="mp-grid">'+related.map(c=>'<article class="mp-card"><a href="'+esc(c.url)+'"><div class="mp-card-visual"><img loading="lazy" src="'+site.otherDomain+esc(c.image)+'" alt="'+esc(c.title)+' 디자인"></div><div class="mp-card-body"><span class="mp-category">PPT BRANDING / '+site.otherService+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(c.summary)+'</p><span class="mp-card-more">사례 자세히 보기 ↗</span></div></a></article>').join('')+'</div>'+cta()+'</div></section>',
+body:'<div class="wrap">'+crumbs([['포트폴리오']])+'</div>'+intro('한 장의 인상부터,\n회사를 설명하는 흐름까지.',site.service+' 사례의 표지와 내부 페이지를 함께 보세요. 이미지뿐 아니라 정보의 구성과 디자인 특징도 정리했습니다.','PORTFOLIO / '+site.service)+'<section class="mp-section"><div class="wrap"><h2 class="mp-title">'+site.service+' 사례</h2><div class="mp-filters"><label>사례 검색<input id="caseSearch" type="search" placeholder="업종 또는 구성 특징 검색"></label><label>업종별 보기<select id="caseCategory"><option value="">전체 업종</option>'+[...new Set(cases.map(c=>c.category))].map(c=>'<option>'+esc(c)+'</option>').join('')+'</select></label><output id="caseCount" aria-live="polite">'+cases.length+'개 사례</output></div><div class="mp-grid">'+cases.map(card).join('')+'</div><p class="mp-empty" id="caseEmpty" hidden>검색 결과가 없습니다. 다른 단어를 입력하거나 전체 업종을 선택해 주세요.</p></div></section><section class="mp-section"><div class="wrap"><div class="mp-heading-row"><h2>함께 살펴볼 '+site.otherService+' 사례</h2><a class="mp-link" href="'+site.otherDomain+'/portfolio/">전체 보기 →</a></div><div class="mp-grid">'+related.map(c=>'<article class="mp-card"><a href="'+esc(c.url)+'">'+portfolioVisual(c,relatedDisplays[c.url.split('/').filter(Boolean).at(-1)],esc)+'<div class="mp-card-body"><span class="mp-category">PPT BRANDING / '+site.otherService+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(c.summary)+'</p><span class="mp-card-more">사례 자세히 보기 ↗</span></div></a></article>').join('')+'</div>'+cta()+'</div></section>',
 graph:[{'@type':'ItemList',name:site.service+' 포트폴리오',itemListElement:cases.map((c,i)=>({'@type':'ListItem',position:i+1,name:c.title,url:absolute(canonicalCase(c))}))}]});
 
 for(const c of cases) {

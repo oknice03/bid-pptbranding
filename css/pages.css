@@ -28,6 +28,15 @@
 .mp-card-visual{aspect-ratio:1.45;background:#eef0f2;overflow:hidden;border-radius:8px}
 .mp-card img{width:100%;height:100%;object-fit:contain;transition:transform .2s}
 .mp-card a:hover img{transform:scale(1.025)}
+/* Original pages are laid out directly: no generated text, no clipping. */
+.mp-card-visual.mp-preview-composite{position:relative;display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:5%;padding:5%;aspect-ratio:1.45;background:linear-gradient(135deg,#f1f2f3,#e4e6e8);isolation:isolate}
+.mp-preview-cover,.mp-preview-page{display:flex;align-items:center;justify-content:center;min-width:0;min-height:0}
+.mp-preview-cover{padding-block:3%}
+.mp-preview-interiors{display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:7%;min-width:0;min-height:0}
+.mp-card .mp-preview-composite img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;aspect-ratio:auto;background:transparent;box-shadow:1px 3px 6px #17212b26;transition:none}
+.mp-card a:hover .mp-preview-composite img{transform:none}
+.mp-card-visual.mp-preview-solo{padding:5%;background:linear-gradient(135deg,#f1f2f3,#e4e6e8)}
+.mp-card .mp-preview-solo img{object-fit:contain}
 .mp-card-body{padding:21px 0 12px}
 .mp-category{font-size:12px;color:var(--accent-dark);font-weight:700;letter-spacing:.06em}
 .mp-card h3{font-size:20px;line-height:1.45;margin:9px 0 11px;letter-spacing:-.035em}

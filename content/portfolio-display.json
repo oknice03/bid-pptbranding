@@ -1,0 +1,348 @@
+{
+  "version": 1,
+  "background": "neutral-gray",
+  "entries": {
+    "architecture-civil-profile": {
+      "cover": "/assets/img/card-covers/architecture-civil-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/architecture-civil-profile/page-07.png",
+          "alt": "건축·토목 공사지명원 비전과 핵심가치 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/architecture-civil-profile/page-09.png",
+          "alt": "건축·토목 공사지명원 시스템 비계 사업 소개 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/architecture-civil-profile/page-08.png",
+          "alt": "건축·토목 공사지명원 조직도 최종 디자인"
+        }
+      ],
+      "sortDate": "2025-09-24",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "civil-development-profile": {
+      "cover": "/assets/img/card-covers/civil-development-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/civil-development-profile/page-07.png",
+          "alt": "토목·개발 공사지명원 경영방침 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/civil-development-profile/page-09.png",
+          "alt": "토목·개발 공사지명원 건축 사업 소개 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/civil-development-profile/page-12.png",
+          "alt": "토목·개발 공사지명원 핵심 경쟁력 최종 디자인"
+        }
+      ],
+      "sortDate": "2025-07-08",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "plant-facilities-profile": {
+      "cover": "/assets/img/card-covers/plant-facilities-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/pilot/plant-final-07.png",
+          "alt": "설비·플랜트 공사지명원 최종 비전과 경영방침 디자인"
+        },
+        {
+          "src": "/assets/img/pilot/plant-final-04.png",
+          "alt": "설비·플랜트 공사지명원 최종 회사 소개 간지 디자인"
+        },
+        {
+          "src": "/assets/img/pilot/plant-final-09.png",
+          "alt": "설비·플랜트 공사지명원 최종 조직도 디자인"
+        }
+      ],
+      "sortDate": "2026-04-13",
+      "sortBasis": "보관 원본 고강씨앤피 공사지명원_0413.pptx 및 2026년 완성 폴더 기준"
+    },
+    "construction-brand-profile": {
+      "cover": "/assets/img/card-covers/construction-brand-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/construction-brand-profile/page-08.png",
+          "alt": "건설·시공 브랜드 공사지명원 전문 서비스 소개 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/construction-brand-profile/page-16.png",
+          "alt": "건설·시공 브랜드 공사지명원 환경설비 프로젝트 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/construction-brand-profile/page-10.png",
+          "alt": "건설·시공 브랜드 공사지명원 미래 사업 방향 최종 디자인"
+        }
+      ],
+      "sortDate": "2025-04-04",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "equipment-facilities-profile": {
+      "cover": "/assets/img/card-covers/equipment-facilities-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/equipment-facilities-profile/page-13.png",
+          "alt": "제조·설비 공사지명원 제품 소개 간지 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/equipment-facilities-profile/page-14.png",
+          "alt": "제조·설비 공사지명원 제품군 소개 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/equipment-facilities-profile/page-08.png",
+          "alt": "제조·설비 공사지명원 조직 구성 최종 디자인"
+        }
+      ],
+      "sortDate": "2025-02-14",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "architecture-development-profile": {
+      "cover": "/assets/img/card-covers/architecture-development-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/architecture-development-profile/page-06.png",
+          "alt": "건축·개발 공사지명원 경영방침 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/architecture-development-profile/page-10.png",
+          "alt": "건축·개발 공사지명원 시공 진행 과정 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/architecture-development-profile/page-08.png",
+          "alt": "건축·개발 공사지명원 유리블럭 사업 소개 최종 디자인"
+        }
+      ],
+      "sortDate": "2025-02-13",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "interior-design-profile": {
+      "cover": "/assets/img/card-covers/interior-design-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/interior-design-profile/page-17.png",
+          "alt": "인테리어 기업 공사지명원 공간 포트폴리오 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/interior-design-profile/page-08.png",
+          "alt": "인테리어 기업 공사지명원 비전과 경영이념 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/interior-design-profile/page-10.png",
+          "alt": "인테리어 기업 공사지명원 인테리어 서비스 최종 디자인"
+        }
+      ],
+      "sortDate": "2024-04-02",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "interior-materials-profile": {
+      "cover": "/assets/img/card-covers/interior-materials-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/interior-materials-profile/page-14.png",
+          "alt": "인테리어·자재 기업 공사지명원 주방 인테리어 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/interior-materials-profile/page-06.png",
+          "alt": "인테리어·자재 기업 공사지명원 경영이념 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/interior-materials-profile/page-09.png",
+          "alt": "인테리어·자재 기업 공사지명원 서비스 소개 최종 디자인"
+        }
+      ],
+      "sortDate": "2023-01-17",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "demolition-profile": {
+      "cover": "/assets/img/card-covers/demolition-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/demolition-profile/page-11.png",
+          "alt": "철거기업 공사지명원 구조물 해체공사 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/demolition-profile/page-08.png",
+          "alt": "철거기업 공사지명원 경영이념 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/demolition-profile/page-12.png",
+          "alt": "철거기업 공사지명원 석면 해체와 제거 최종 디자인"
+        }
+      ],
+      "sortDate": "2024-10-23",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "construction-demolition-profile": {
+      "cover": "/assets/img/card-covers/construction-demolition-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/construction-demolition-profile/page-09.png",
+          "alt": "건설·철거 공사지명원 종합 철거 서비스 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/construction-demolition-profile/page-06.png",
+          "alt": "건설·철거 공사지명원 경영방침 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/construction-demolition-profile/page-13.png",
+          "alt": "건설·철거 공사지명원 핵심 경쟁력 최종 디자인"
+        }
+      ],
+      "sortDate": "2025-06-18",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "civil-infrastructure-profile": {
+      "cover": "/assets/img/card-covers/civil-infrastructure-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/civil-infrastructure-profile/page-08.png",
+          "alt": "토목·기반시설 공사지명원 경영방침 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/civil-infrastructure-profile/page-10.png",
+          "alt": "토목·기반시설 공사지명원 교통안전 사업 소개 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/civil-infrastructure-profile/page-09.png",
+          "alt": "토목·기반시설 공사지명원 조직도 최종 디자인"
+        }
+      ],
+      "sortDate": "2024-12-02",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "bridge-infrastructure-profile": {
+      "cover": "/assets/img/card-covers/bridge-infrastructure-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/bridge-infrastructure-profile/page-07.png",
+          "alt": "교량·인프라 공사지명원 경영방침 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/bridge-infrastructure-profile/page-10.png",
+          "alt": "교량·인프라 공사지명원 계측 시스템 사업 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/bridge-infrastructure-profile/page-09.png",
+          "alt": "교량·인프라 공사지명원 조직 구성 최종 디자인"
+        }
+      ],
+      "sortDate": "2025-04-30",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "building-materials-profile": {
+      "cover": "/assets/img/card-covers/building-materials-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/building-materials-profile/page-12.png",
+          "alt": "건축자재 기업 공사지명원 건축 철물 사업 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/building-materials-profile/page-07.png",
+          "alt": "건축자재 기업 공사지명원 경영방침 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/building-materials-profile/page-13.png",
+          "alt": "건축자재 기업 공사지명원 특화 공사 최종 디자인"
+        }
+      ],
+      "sortDate": "2023-06-20",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "flooring-construction-profile": {
+      "cover": "/assets/img/card-covers/flooring-construction-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/flooring-construction-profile/page-07.png",
+          "alt": "바닥재·시공 공사지명원 경영이념 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/flooring-construction-profile/page-09.png",
+          "alt": "바닥재·시공 공사지명원 바닥 시공 분야 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/flooring-construction-profile/page-10.png",
+          "alt": "바닥재·시공 공사지명원 방수와 보수 공사 최종 디자인"
+        }
+      ],
+      "sortDate": "2024-12-11",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "plant-engineering-profile": {
+      "cover": "/assets/img/card-covers/plant-engineering-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/plant-engineering-profile/page-15.png",
+          "alt": "플랜트 엔지니어링 공사지명원 제품의 기능과 특장점 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/plant-engineering-profile/page-13.png",
+          "alt": "플랜트 엔지니어링 공사지명원 보온재 특장점 최종 디자인"
+        },
+        {
+          "src": "/assets/img/final/plant-engineering-profile/page-08.png",
+          "alt": "플랜트 엔지니어링 공사지명원 경영이념 최종 디자인"
+        }
+      ],
+      "sortDate": "2024-06-18",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "bln-construction-profile": {
+      "cover": "/assets/img/card-covers/bln-construction-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/bln-construction-profile/page-07.png",
+          "alt": "비엘엔종합건설 비전과 경영방침 실제 완성 페이지"
+        },
+        {
+          "src": "/assets/img/final/bln-construction-profile/page-13.png",
+          "alt": "비엘엔종합건설 시공 경쟁력 실제 완성 페이지"
+        },
+        {
+          "src": "/assets/img/final/bln-construction-profile/page-12.png",
+          "alt": "비엘엔종합건설 공사 수행 프로세스 실제 완성 페이지"
+        }
+      ],
+      "sortDate": "2026-08-31",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "cleanroom-construction-profile": {
+      "cover": "/assets/img/card-covers/cleanroom-construction-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/cases/cleanroom-04.png",
+          "alt": "클린룸 공사지명원 병원 클린룸 사업 소개 실제 완성 페이지"
+        },
+        {
+          "src": "/assets/img/cases/cleanroom-01.png",
+          "alt": "클린룸 공사지명원 조직도 실제 완성 페이지"
+        },
+        {
+          "src": "/assets/img/cases/cleanroom-02-public.png",
+          "alt": "클린룸 공사지명원 반도체 클린룸 사업 소개 실제 완성 페이지"
+        }
+      ],
+      "sortDate": "2024-09-25",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    },
+    "yebo-construction-profile": {
+      "cover": "/assets/img/card-covers/yebo-construction-profile.png",
+      "interiors": [
+        {
+          "src": "/assets/img/final/yebo-construction-profile/page-10.png",
+          "alt": "예보이엔씨 도로포장 사업 소개 실제 완성 페이지"
+        },
+        {
+          "src": "/assets/img/final/yebo-construction-profile/page-07.png",
+          "alt": "예보이엔씨 비전과 경영방침 실제 완성 페이지"
+        },
+        {
+          "src": "/assets/img/final/yebo-construction-profile/page-13.png",
+          "alt": "예보이엔씨 직영 시공 경쟁력 실제 완성 페이지"
+        }
+      ],
+      "sortDate": "2026-08-12",
+      "sortBasis": "보관 원본의 연도·파일명 날짜를 작업 시점의 정렬 근거로 사용. 홈페이지 수정일과 구분."
+    }
+  }
+}
