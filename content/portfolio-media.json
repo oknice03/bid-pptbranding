@@ -1,0 +1,590 @@
+{
+  "/assets/img/card-covers/architecture-civil-profile.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-000-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/architecture-development-profile.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-001-v1.webp",
+    "thumbWidth": 778,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/bln-construction-profile.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-002-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/bridge-infrastructure-profile.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-003-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/building-materials-profile.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-004-v1.webp",
+    "thumbWidth": 778,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/civil-development-profile.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-005-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/civil-infrastructure-profile.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-006-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/cleanroom-construction-profile.png": {
+    "width": 1600,
+    "height": 2245,
+    "thumbnail": "/assets/img/portfolio-web/page-007-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/construction-brand-profile.png": {
+    "width": 1400,
+    "height": 996,
+    "thumbnail": "/assets/img/portfolio-web/page-008-v1.webp",
+    "thumbWidth": 1100,
+    "thumbHeight": 783
+  },
+  "/assets/img/card-covers/construction-demolition-profile.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-009-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/demolition-profile.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-010-v1.webp",
+    "thumbWidth": 778,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/equipment-facilities-profile.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-011-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/flooring-construction-profile.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-012-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/interior-design-profile.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-013-v1.webp",
+    "thumbWidth": 778,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/interior-materials-profile.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-014-v1.webp",
+    "thumbWidth": 778,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/plant-engineering-profile.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-015-v1.webp",
+    "thumbWidth": 778,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/plant-facilities-profile.png": {
+    "width": 1800,
+    "height": 2525,
+    "thumbnail": "/assets/img/portfolio-web/page-016-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/card-covers/yebo-construction-profile.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-017-v1.webp",
+    "thumbWidth": 784,
+    "thumbHeight": 1100
+  },
+  "/assets/img/cases/cleanroom-01.png": {
+    "width": 773,
+    "height": 1079,
+    "thumbnail": "/assets/img/portfolio-web/page-018-v1.webp",
+    "thumbWidth": 401,
+    "thumbHeight": 560
+  },
+  "/assets/img/cases/cleanroom-02-public.png": {
+    "width": 773,
+    "height": 1079,
+    "thumbnail": "/assets/img/portfolio-web/page-019-v1.webp",
+    "thumbWidth": 401,
+    "thumbHeight": 560
+  },
+  "/assets/img/cases/cleanroom-04.png": {
+    "width": 773,
+    "height": 1079,
+    "thumbnail": "/assets/img/portfolio-web/page-020-v1.webp",
+    "thumbWidth": 401,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/architecture-civil-profile/page-07.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-021-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/architecture-civil-profile/page-08.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-022-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/architecture-civil-profile/page-09.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-023-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/architecture-development-profile/page-06.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-024-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/architecture-development-profile/page-08.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-025-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/architecture-development-profile/page-10.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-026-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/bln-construction-profile/page-07.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-027-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/bln-construction-profile/page-12.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-028-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/bln-construction-profile/page-13.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-029-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/bridge-infrastructure-profile/page-07.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-030-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/bridge-infrastructure-profile/page-09.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-031-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/bridge-infrastructure-profile/page-10.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-032-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/building-materials-profile/page-07.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-033-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/building-materials-profile/page-12.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-034-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/building-materials-profile/page-13.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-035-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/civil-development-profile/page-07.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-036-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/civil-development-profile/page-09.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-037-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/civil-development-profile/page-12.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-038-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/civil-infrastructure-profile/page-08.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-039-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/civil-infrastructure-profile/page-09.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-040-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/civil-infrastructure-profile/page-10.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-041-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/construction-brand-profile/page-08.png": {
+    "width": 1400,
+    "height": 996,
+    "thumbnail": "/assets/img/portfolio-web/page-042-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 398
+  },
+  "/assets/img/final/construction-brand-profile/page-10.png": {
+    "width": 1400,
+    "height": 996,
+    "thumbnail": "/assets/img/portfolio-web/page-043-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 398
+  },
+  "/assets/img/final/construction-brand-profile/page-16.png": {
+    "width": 1400,
+    "height": 996,
+    "thumbnail": "/assets/img/portfolio-web/page-044-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 398
+  },
+  "/assets/img/final/construction-demolition-profile/page-06.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-045-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/construction-demolition-profile/page-09.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-046-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/construction-demolition-profile/page-13.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-047-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/demolition-profile/page-08.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-048-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/demolition-profile/page-11.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-049-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/demolition-profile/page-12.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-050-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/equipment-facilities-profile/page-08.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-051-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/equipment-facilities-profile/page-13.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-052-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/equipment-facilities-profile/page-14.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-053-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/flooring-construction-profile/page-07.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-054-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/flooring-construction-profile/page-09.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-055-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/flooring-construction-profile/page-10.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-056-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/interior-design-profile/page-08.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-057-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/interior-design-profile/page-10.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-058-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/interior-design-profile/page-17.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-059-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/interior-materials-profile/page-06.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-060-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/interior-materials-profile/page-09.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-061-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/interior-materials-profile/page-14.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-062-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/plant-engineering-profile/page-08.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-063-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/plant-engineering-profile/page-13.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-064-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/plant-engineering-profile/page-15.png": {
+    "width": 1100,
+    "height": 1556,
+    "thumbnail": "/assets/img/portfolio-web/page-065-v1.webp",
+    "thumbWidth": 396,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/yebo-construction-profile/page-07.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-066-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/yebo-construction-profile/page-10.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-067-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/final/yebo-construction-profile/page-13.png": {
+    "width": 1100,
+    "height": 1543,
+    "thumbnail": "/assets/img/portfolio-web/page-068-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/peer-cards/aerospace-profile-cover.png": {
+    "width": 1400,
+    "height": 993,
+    "thumbnail": "/assets/img/portfolio-web/page-069-v1.webp",
+    "thumbWidth": 1100,
+    "thumbHeight": 780
+  },
+  "/assets/img/peer-cards/aerospace-profile-page-1.png": {
+    "width": 1400,
+    "height": 993,
+    "thumbnail": "/assets/img/portfolio-web/page-070-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 397
+  },
+  "/assets/img/peer-cards/aerospace-profile-page-2.png": {
+    "width": 1400,
+    "height": 993,
+    "thumbnail": "/assets/img/portfolio-web/page-071-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 397
+  },
+  "/assets/img/peer-cards/aerospace-profile-page-3.png": {
+    "width": 1400,
+    "height": 993,
+    "thumbnail": "/assets/img/portfolio-web/page-072-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 397
+  },
+  "/assets/img/peer-cards/logistics-profile-cover.png": {
+    "width": 1400,
+    "height": 969,
+    "thumbnail": "/assets/img/portfolio-web/page-073-v1.webp",
+    "thumbWidth": 1100,
+    "thumbHeight": 761
+  },
+  "/assets/img/peer-cards/logistics-profile-page-1.png": {
+    "width": 1400,
+    "height": 969,
+    "thumbnail": "/assets/img/portfolio-web/page-074-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 388
+  },
+  "/assets/img/peer-cards/logistics-profile-page-2.png": {
+    "width": 1400,
+    "height": 969,
+    "thumbnail": "/assets/img/portfolio-web/page-075-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 388
+  },
+  "/assets/img/peer-cards/logistics-profile-page-3.png": {
+    "width": 1400,
+    "height": 969,
+    "thumbnail": "/assets/img/portfolio-web/page-076-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 388
+  },
+  "/assets/img/peer-cards/machinery-profile-cover.png": {
+    "width": 1400,
+    "height": 990,
+    "thumbnail": "/assets/img/portfolio-web/page-077-v1.webp",
+    "thumbWidth": 1100,
+    "thumbHeight": 778
+  },
+  "/assets/img/peer-cards/machinery-profile-page-1.png": {
+    "width": 1400,
+    "height": 990,
+    "thumbnail": "/assets/img/portfolio-web/page-078-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 396
+  },
+  "/assets/img/peer-cards/machinery-profile-page-2.png": {
+    "width": 1400,
+    "height": 990,
+    "thumbnail": "/assets/img/portfolio-web/page-079-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 396
+  },
+  "/assets/img/peer-cards/machinery-profile-page-3.png": {
+    "width": 1400,
+    "height": 990,
+    "thumbnail": "/assets/img/portfolio-web/page-080-v1.webp",
+    "thumbWidth": 560,
+    "thumbHeight": 396
+  },
+  "/assets/img/pilot/plant-final-04.png": {
+    "width": 1800,
+    "height": 2525,
+    "thumbnail": "/assets/img/portfolio-web/page-081-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/pilot/plant-final-07.png": {
+    "width": 1800,
+    "height": 2525,
+    "thumbnail": "/assets/img/portfolio-web/page-082-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  },
+  "/assets/img/pilot/plant-final-09.png": {
+    "width": 1800,
+    "height": 2525,
+    "thumbnail": "/assets/img/portfolio-web/page-083-v1.webp",
+    "thumbWidth": 399,
+    "thumbHeight": 560
+  }
+}

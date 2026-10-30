@@ -71,7 +71,10 @@ for(const file of pages) {
     assert(targetHTML.includes('id="'+id+'"'),rel+': 앵커 없음 '+value);
   }
  }
- for(const m of html.matchAll(/<img\b[^>]*>/g))assert(/\balt="[^"]+"/.test(m[0]),rel+': 이미지 대체텍스트');
+ for(const m of html.matchAll(/<img\b[^>]*>/g)) {
+   const decorative=/class="mp-art-background"/.test(m[0]) && /alt=""/.test(m[0]) && /aria-hidden="true"/.test(m[0]);
+   assert(decorative || /\balt="[^"]+"/.test(m[0]),rel+': 이미지 대체텍스트');
+ }
 }
 assert(!files.some(x=>/\.(pdf|zip|pptx?|docx?|xlsx?)$/i.test(x)),'비공개 문서가 출력에 포함되었습니다.');
 assert(!files.some(x=>/[/\\](content|scripts|\.git|\.claude)[/\\]/.test(x)),'소스 폴더 유출');
