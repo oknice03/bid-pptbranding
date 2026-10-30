@@ -37,6 +37,38 @@
 .mp-card a:hover .mp-preview-composite img{transform:none}
 .mp-card-visual.mp-preview-solo{padding:5%;background:linear-gradient(135deg,#f1f2f3,#e4e6e8)}
 .mp-card .mp-preview-solo img{object-fit:contain}
+/* 2026-10-30: original pages, industry scenes, no border glow.
+   Coordinates leave every page fully visible; the cover remains largest. */
+.mp-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 26px}
+.mp-card .mp-art-stage{position:relative;aspect-ratio:1.5;isolation:isolate;background:#17202c;border-radius:10px;overflow:hidden;padding:0;display:block}
+.mp-card .mp-art-background{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;box-shadow:none;transform:none!important}
+.mp-art-pages{position:absolute;inset:0}
+.mp-art-sheet{position:absolute;aspect-ratio:var(--page-ratio);overflow:hidden;background:transparent;border:0;outline:0;box-shadow:0 8px 16px -5px #0008,0 22px 30px -16px #0008}
+.mp-card .mp-art-sheet img{position:absolute;display:block;left:var(--image-left);top:var(--image-top);width:var(--image-width);height:auto;max-width:none;max-height:none;object-fit:fill;background:none;border:0;box-shadow:none;transform:none!important;transition:none}
+.mp-art-cover{width:65%;left:5%;top:50%;transform:translateY(-50%);z-index:2}
+.mp-art-inside{width:21%;right:5%;left:auto;box-shadow:0 6px 14px -4px #0009}
+.mp-art-inside-0{top:8%}
+.mp-art-inside-1{top:38%}
+.mp-art-inside-2{top:68%}
+.mp-art-reverse .mp-art-cover{left:auto;right:5%}
+.mp-art-reverse .mp-art-inside{right:auto;left:5%}
+.mp-art-gallery .mp-art-cover{width:60%;left:20%;top:6%;transform:none}
+.mp-art-gallery .mp-art-inside{width:22%;top:auto;bottom:5%;left:14%;right:auto}
+.mp-art-gallery .mp-art-inside-1{left:39%}
+.mp-art-gallery .mp-art-inside-2{left:64%}
+.mp-art-portrait .mp-art-cover,.mp-art-portrait-reverse .mp-art-cover{width:37%;left:6%}
+.mp-art-portrait .mp-art-inside,.mp-art-portrait-reverse .mp-art-inside{width:21%;left:49%;right:auto;top:17%}
+.mp-art-portrait .mp-art-inside-1,.mp-art-portrait-reverse .mp-art-inside-1{left:73%;top:38%}
+.mp-art-portrait-reverse .mp-art-cover{left:auto;right:6%}
+.mp-art-portrait-reverse .mp-art-inside-0{left:6%;top:38%}
+.mp-art-portrait-reverse .mp-art-inside-1{left:30%;top:17%}
+.mp-art-solo .mp-art-cover{width:86%;left:7%}
+.mp-art-theme-atelier .mp-art-sheet{box-shadow:0 8px 18px -6px #392d2666,0 20px 30px -18px #392d2655}
+.mp-card>a:focus-visible{outline:3px solid #7548c4;outline-offset:6px;border-radius:10px}
+.mp-card-body{padding-top:13px}
+.service-home #portfolio .mp-card h3{font-size:clamp(19px,1.65vw,23px);font-weight:800;line-height:1.45;word-break:keep-all}
+.mp-card h3{font-size:clamp(19px,1.65vw,23px);font-weight:800;word-break:keep-all;overflow-wrap:anywhere}
+@media(max-width:600px){.mp-grid,.service-home .mp-grid{grid-template-columns:1fr;gap:28px}.mp-card h3{font-size:20px}}
 .mp-card-body{padding:21px 0 12px}
 .mp-category{font-size:12px;color:var(--accent-dark);font-weight:700;letter-spacing:.06em}
 .mp-card h3{font-size:20px;line-height:1.45;margin:9px 0 11px;letter-spacing:-.035em}
