@@ -1206,3 +1206,9 @@ h1,h2,h3,p{margin:0;}
   .br-mobile{ display:inline; }
   .mid-cta-inner{ text-align:center; }
 }
+/* 2026-11-03 copy revision */
+.contact-section .contact-tagline{ font-style:normal; font-size:16px; max-width:560px; line-height:1.7; }
+.mid-cta-buttons{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+@media (max-width:720px){ .hero-v2 .hero-cta .btn{ white-space:normal; } }
+.hero-v2 .hero-cta{ gap:12px; }
+.hero-v2 .btn{ padding:16px 24px; }

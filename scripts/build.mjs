@@ -127,6 +127,7 @@ home=home.replace(/<div class="lightbox" id="lightbox"[\s\S]*?<\/div>/,'');
 home=home.replace('<script src="js/main.js"></script>','<script src="/js/pages.js" defer></script>');
 home=home.replace('</head>','<meta name="robots" content="'+(noindex?'noindex,follow':'index,follow,max-image-preview:large')+'"><link rel="stylesheet" href="/css/pages.css"></head>');
 home=home.replace('이렇게 해주는 곳은 이곳 뿐입니다','기획부터 디자인까지, 필요한 과정을 함께합니다');
+if(site.id==='bid')home=home.replace('<h3 class="section-title">디자인과 구성을 함께 살펴보세요.</h3><p class="section-desc">업종별 실제 포트폴리오입니다.','<h3 class="section-title">같은 건설업, 다른 얼굴</h3><p class="section-desc">토목·플랜트·철거·인테리어. 업종과 회사의 성격에 맞춰 표지부터 내지까지 다르게 설계했습니다.');
 home=home.replaceAll('http://pptbranding.com','https://pptbranding.com');
 home=home.replace(/(<meta (?:property="og:image"|name="twitter:image") content=")[^"]+"/g,'$1'+absolute(cardImage(cases[0]).src)+'"');
 home=home.replace(/(<section class="section contact-section" id="contact">)/,'<section class="section section-alt"><div class="wrap"><div class="mp-heading-row"><h2>'+site.service+' 준비 가이드</h2><a class="mp-link" href="/guides/">가이드 전체 보기 →</a></div>'+guideCards()+'</div></section>$1');
