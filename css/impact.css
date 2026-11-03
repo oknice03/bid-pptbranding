@@ -40,6 +40,22 @@ body{overflow-x:clip}
 .hero-text{max-width:none;text-align:left}
 .hero h1{font-size:clamp(40px,7vw,96px);font-weight:900;line-height:1.1;letter-spacing:-.065em;color:#fff}
 .hero h1 strong{color:var(--lime)}
+.hero .hero-topic{display:block;margin-bottom:18px;font-size:clamp(24px,3.6vw,48px);font-weight:800;line-height:1.25;letter-spacing:-.05em;color:#d2d2d8}
+.hero .hero-headline{display:block;font-size:clamp(52px,9vw,124px);font-weight:900;line-height:1.05;letter-spacing:-.065em;color:#fff}
+.hero h1 em{font-style:normal;color:var(--lime)}
+
+/* 현재 상황 → 그대로 두면 → 접근 방식: 큰 문장 띠 */
+.statement-title{font-size:clamp(32px,5.4vw,72px);font-weight:900;line-height:1.2;letter-spacing:-.065em;color:var(--ink)}
+.statement-title .section-eyebrow{font-size:14px;letter-spacing:.02em;line-height:1.4}
+#situation{background:var(--paper);padding:104px 0}
+.lime-mark{background:linear-gradient(transparent 58%,var(--lime) 58%,var(--lime) 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+#risk{background:var(--lime);border-block:2px solid var(--ink);padding:96px 0}
+.risk-tag{display:table;margin:0 0 28px;padding:8px 18px 11px;background:var(--ink);color:var(--lime);font-size:clamp(20px,2.4vw,30px);font-weight:900;letter-spacing:-.04em;box-shadow:8px 8px 0 #fff}
+.risk-body{font-size:clamp(30px,5vw,66px);font-weight:800;line-height:1.28;letter-spacing:-.06em;color:#2a2a2e}
+.risk-body strong{font-weight:900;color:var(--ink);background:linear-gradient(transparent 62%,#fff 62%,#fff 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+#approach{background:var(--ink);padding:110px 0}
+#approach .statement-title{color:#fff}
+#approach .statement-title em{font-style:normal;color:var(--lime)}
 .hero-sub{margin-top:36px;font-size:clamp(18px,2.1vw,26px);font-weight:600;color:#d2d2d8;line-height:1.7}
 .hero-sub strong{color:#fff;font-weight:900}
 .hero-cta{justify-content:flex-start;margin-top:40px}
@@ -163,6 +179,8 @@ body{overflow-x:clip}
 
 @media(max-width:720px){
  .hero{padding:64px 0 60px}
+ #situation,#risk,#approach{padding:64px 0}
+ .risk-tag{box-shadow:5px 5px 0 #fff}
  .hero .btn-accent,.contact-section .btn-accent{box-shadow:4px 4px 0 #fff}
  .service-detail-card,.toc-card,.mp-card>a{box-shadow:5px 5px 0 var(--ink)}
  .contact-section{padding-top:72px;padding-bottom:72px}
