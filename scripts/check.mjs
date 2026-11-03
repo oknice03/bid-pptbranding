@@ -77,7 +77,7 @@ for(const file of pages) {
  }
 }
 assert(!files.some(x=>/\.(pdf|zip|pptx?|docx?|xlsx?)$/i.test(x)),'비공개 문서가 출력에 포함되었습니다.');
-assert(!files.some(x=>/[/\\](content|scripts|\.git|\.claude)[/\\]/.test(x)),'소스 폴더 유출');
+assert(!files.some(x=>/(^|[/\\])(content|scripts|\.git|\.claude)[/\\]/.test(path.relative(root,x))),'소스 폴더 유출');
 const searchAssets=await checkSearchAssets(site,root);
 const imagePrivacy=JSON.parse(await readFile('content/image-privacy.json','utf8'));
 for(const blocked of imagePrivacy.blocked) assert(!files.includes(path.join(root,blocked.slice(1))),'가림 전 이미지 배포 금지: '+blocked);

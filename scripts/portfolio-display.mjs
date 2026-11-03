@@ -7,9 +7,10 @@ export function sortPortfolio(items, entries) {
   for (const value of Object.values(entries)) {
     if (value.sortDate) assert(/^\d{4}-\d{2}-\d{2}$/.test(value.sortDate) && !Number.isNaN(Date.parse(value.sortDate)), '작업 날짜 형식 확인');
   }
+  const portrait=slug=>directions[slug]?.[1]?.startsWith('portrait')?1:0;
   return [...items].sort((a,b) => {
     const da=entries[a.slug]?.sortDate, db=entries[b.slug]?.sortDate;
-    return (da&&db ? db.localeCompare(da) : da ? -1 : db ? 1 : 0) || (a.order??999)-(b.order??999) || a.slug.localeCompare(b.slug);
+    return portrait(a.slug)-portrait(b.slug) || (da&&db ? db.localeCompare(da) : da ? -1 : db ? 1 : 0) || (a.order??999)-(b.order??999) || a.slug.localeCompare(b.slug);
   });
 }
 export function portfolioVisual(c, display, esc, prefix='') {

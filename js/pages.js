@@ -4,15 +4,16 @@
   toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');});
   nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){close();toggle?.focus();}});
-  const search=document.getElementById('caseSearch'), filter=document.getElementById('caseCategory'), count=document.getElementById('caseCount');
+  const chips=[...document.querySelectorAll('.mp-chip')], count=document.getElementById('caseCount');
+  let category='';
   function update() {
     let total=0;
     document.querySelectorAll('[data-case]').forEach(card=>{
-      const matches=(!search.value||card.textContent.toLowerCase().includes(search.value.toLowerCase()))&&(!filter.value||card.dataset.category===filter.value);
+      const matches=!category||card.dataset.category===category;
       card.hidden=!matches;if(matches)total++;
     });
     if(count)count.textContent=total+'개 사례';
     const empty=document.getElementById('caseEmpty');if(empty)empty.hidden=total!==0;
   }
-  search?.addEventListener('input',update);filter?.addEventListener('change',update);
+  chips.forEach(chip=>chip.addEventListener('click',()=>{category=chip.dataset.filter;chips.forEach(c=>c.setAttribute('aria-pressed',String(c===chip)));update();}));
 })();
