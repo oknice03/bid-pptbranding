@@ -293,3 +293,7 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 .site-header .brand,.site-footer .footer-logo{display:none!important}
 .header-inner{justify-content:flex-end}
 .hero .hero-topic br{display:inline!important}
+#video .video-main{margin-top:48px;max-width:960px}
+#about .about-video{max-width:880px;margin:8px auto 56px}
+#about .about-video .video-wrap{margin-top:0;max-width:none}
+#about .about-video-link{margin-top:14px;text-align:center;font-size:14px}
