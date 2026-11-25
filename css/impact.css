@@ -52,7 +52,8 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 .hero-inner{justify-content:flex-start}
 .hero-text{max-width:none;text-align:left}
 .hero h1{color:#fff;font-weight:800;letter-spacing:-.05em}
-.hero .hero-topic{display:block;margin-bottom:16px;font-size:clamp(26px,3.8vw,50px);font-weight:600;line-height:1.3;letter-spacing:-.04em;color:rgba(255,255,255,.82)}
+.hero .hero-topic{display:block;margin-bottom:22px;font-size:clamp(32px,5vw,68px);font-weight:700;line-height:1.22;letter-spacing:-.045em;color:#fff}
+.hero .hero-topic-key{font-weight:800;color:var(--yellow)}
 .hero .hero-headline{display:block;font-size:clamp(52px,8.4vw,116px);font-weight:800;line-height:1.05;letter-spacing:-.06em;color:#fff}
 .hero .hero-headline{white-space:nowrap}
 .hero h1 em{font-style:normal;color:#5fb0ff}
@@ -291,3 +292,4 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 /* 로고 삭제 (2026-11-25 요청): 헤더·푸터 로고 숨김, 메뉴는 오른쪽 정렬 */
 .site-header .brand,.site-footer .footer-logo{display:none!important}
 .header-inner{justify-content:flex-end}
+.hero .hero-topic br{display:inline!important}
