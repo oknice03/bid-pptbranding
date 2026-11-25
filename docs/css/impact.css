@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2.0.5/fonts/static/woff2/SUIT.css");
 /* Design layer (2026-11 blue system): 밝은 파랑 + 네이비 + 포인트 노랑.
    중앙 정렬 큰 제목, 연한 하늘색 교차 배경, 둥근 카드와 부드러운 그림자, 파란 그라데이션 띠.
    style.css·pages.css 다음에 불러온다. 문구·구조는 index.html과 빌드 스크립트가 그대로 유지한다. */
@@ -6,7 +7,7 @@
   --sky:#f4f9ff;--sky-2:#e8f3ff;--gray-bg:#f7f8fa;--ink:#262626;
   --navy-900:#002f55;--navy-800:#0b2e55;--navy-700:#0060d0;--navy-600:#0a84ff;
   --ice:#f4f9ff;--text:#262626;--muted:#5f6670;--accent:#0a84ff;--accent-dark:#0060d0;--border:#e3e8ef;
-  --font:"Pretendard",-apple-system,BlinkMacSystemFont,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+  --font:"SUIT","Pretendard",-apple-system,BlinkMacSystemFont,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;
   --radius:22px;--shadow:0 10px 30px rgba(20,40,80,.08);--shadow-lg:0 20px 50px rgba(20,40,80,.12);
 }
 body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
@@ -81,7 +82,7 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 .eq-terms{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
 .eq-term{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:34px 20px;border-radius:var(--radius);background:#fff;box-shadow:var(--shadow);border:1px solid #eef2f7}
 .eq-term+.eq-term::before{content:"+";position:absolute;left:-28px;top:50%;transform:translateY(-50%);font-size:26px;font-weight:700;color:#b7c4d4}
-.eq-num{font-size:30px;font-weight:800;color:var(--blue);font-family:Georgia,"Times New Roman",serif}
+.eq-num{font-size:30px;font-weight:800;color:var(--blue);font-family:var(--font)}
 .eq-term strong{font-size:clamp(19px,1.8vw,23px);font-weight:700;letter-spacing:-.03em;color:var(--ink)}
 .eq-term>span:last-child{font-size:14.5px;font-weight:400;line-height:1.65;color:var(--muted)}
 .eq-sign{align-self:center;font-size:44px;font-weight:700;color:var(--blue);line-height:1}
@@ -103,7 +104,7 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 .service-detail-tag.tag-design{background:var(--navy);color:#fff;border:0}
 .service-detail-note{border-radius:999px;background:var(--sky);color:var(--blue-dark)}
 #toc{background:#fff}
-.toc-num{display:block;color:var(--blue);font-weight:800;font-size:34px;background:none;padding:0;transform:none!important;font-family:Georgia,"Times New Roman",serif}
+.toc-num{display:block;color:var(--blue);font-weight:800;font-size:34px;background:none;padding:0;transform:none!important;font-family:var(--font)}
 .toc-note{border-radius:999px;background:var(--sky);color:var(--blue-dark);font-weight:600}
 
 /* ---------- 대표 소개 ---------- */
@@ -124,7 +125,7 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 
 /* ---------- 포트폴리오: 큰 영문 워드마크 + 이미지 타일 ---------- */
 #portfolio{background:#fff;text-align:center}
-#portfolio>.wrap::before{content:"PORTFOLIO";display:block;margin-bottom:8px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(54px,9vw,110px);font-weight:700;line-height:1;letter-spacing:.01em;color:var(--blue)}
+#portfolio>.wrap::before{content:"PORTFOLIO";display:block;margin-bottom:8px;font-family:var(--font);font-size:clamp(54px,9vw,110px);font-weight:700;line-height:1;letter-spacing:.01em;color:var(--blue)}
 #portfolio .mp-grid{text-align:left;margin-top:48px}
 #portfolio .mp-center .btn-outline,.mp-center .btn-outline{background:var(--navy);color:#fff;border:0;min-width:min(100%,420px);min-height:62px;font-size:18px}
 #portfolio .mp-center .btn-outline:hover,.mp-center .btn-outline:hover{background:#00213d}
@@ -141,7 +142,7 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 .process-flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:48px;overflow:visible}
 .process-arrow{display:none}
 .process-step{width:auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:30px 14px 26px;border:1px solid #eef2f7;counter-increment:none}
-.process-circle{width:auto;height:auto;background:none;color:var(--blue);border:0;border-radius:0;font-size:15px;font-weight:800;letter-spacing:.06em;font-family:Georgia,"Times New Roman",serif}
+.process-circle{width:auto;height:auto;background:none;color:var(--blue);border:0;border-radius:0;font-size:15px;font-weight:800;letter-spacing:.06em;font-family:var(--font)}
 .process-circle::before{content:"STEP\00a0"}
 .process-label{color:var(--ink);font-weight:700;font-size:16px;letter-spacing:-.02em}
 .process-step:last-child{background:linear-gradient(135deg,#1287ff,#0050c0);border-color:transparent}
@@ -172,7 +173,7 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 
 /* ---------- 문의: 밝은 파랑 ---------- */
 .contact-section{background:var(--blue);padding-top:120px;padding-bottom:120px}
-.contact-section::before{content:"Contact";display:block;text-align:center;margin-bottom:14px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(48px,6.4vw,80px);font-weight:700;color:#fff;line-height:1}
+.contact-section::before{content:"Contact";display:block;text-align:center;margin-bottom:14px;font-family:var(--font);font-size:clamp(48px,6.4vw,80px);font-weight:700;color:#fff;line-height:1}
 .contact-eyebrow{color:rgba(255,255,255,.85)!important}
 .contact-title{font-size:clamp(26px,3.8vw,46px);font-weight:500;letter-spacing:-.05em;line-height:1.4;max-width:none;color:#fff}
 .contact-title .lime-text{color:var(--yellow);font-weight:800}
@@ -287,3 +288,6 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 @media print{.quick-bar{display:none}}
 .contact-title br{display:inline!important}
 @media(max-width:720px){.mid-cta-inner{text-align:center;justify-content:center}}
+/* 로고 삭제 (2026-11-25 요청): 헤더·푸터 로고 숨김, 메뉴는 오른쪽 정렬 */
+.site-header .brand,.site-footer .footer-logo{display:none!important}
+.header-inner{justify-content:flex-end}
