@@ -297,3 +297,6 @@ body{overflow-x:clip;color:var(--ink);font-family:var(--font)}
 #about .about-video{max-width:880px;margin:8px auto 56px}
 #about .about-video .video-wrap{margin-top:0;max-width:none}
 #about .about-video-link{margin-top:14px;text-align:center;font-size:14px}
+/* 목차 카드: 번호 삭제, 제목 크게 + 파란색 */
+#toc .toc-card h3{font-size:clamp(24px,2.4vw,30px);font-weight:800;color:var(--blue);letter-spacing:-.04em;margin-bottom:14px}
+#toc .toc-card:hover h3{color:var(--blue-dark)}
